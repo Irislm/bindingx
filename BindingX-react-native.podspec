@@ -1,5 +1,4 @@
 # coding: utf-8
-
 Pod::Spec.new do |s|
   s.name         = "BindingX"
   s.version      = "1.0.2"
@@ -22,10 +21,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
 
-  s.source =  { :path => '.' }
-  s.source_files  = "core/ios/BindingX/**/*.{h,m,mm}" , "react-native/lib/ios/RNBindingX/*.{h,m,mm}"
+  s.source =  { :git => 'https://github.com/alibaba/bindingx.git' }
+  s.source_files  = "react-native/lib/ios/RNBindingX/core/*.{h,m,mm}", "react-native/lib/ios/RNBindingX/*.{h,m,mm}"
   
   s.requires_arc = true
   s.dependency "React"
-  s.dependency "yoga"
+  s.dependency "Yoga"
 end
