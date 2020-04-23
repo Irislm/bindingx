@@ -63,8 +63,6 @@ class HomeScreen extends React.Component {
 
   };
 
-
-
   render() {
     return (
       <View style={{flex: 1}} onPress={()=>alert(2)}>
@@ -82,19 +80,8 @@ class HomeScreen extends React.Component {
 
 class DetailScreen extends React.Component {
 
-  static navigationOptions = ({navigation}) => {
-    return {
-      title:navigation.getParam('title')
-    }
-  }
-
-  componentWillMount() {
-
-  }
-
   render() {
-    let path = this.props.navigation.getParam('path');
-    switch (path){
+    switch (this.props.route.params.path){
       case 'AnimatedBall':
         return (<AnimatedBall/>);
         break;

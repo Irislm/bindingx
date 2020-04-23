@@ -15,7 +15,7 @@ import {
 
 import {DeviceEventEmitter} from 'react-native';
 
-import bindingx from 'react-native-bindingx';
+import bindingx from '../bindingx';
 
 export default class TimingDemo extends Component {
 
